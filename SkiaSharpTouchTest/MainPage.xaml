@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:SkiaSharpTouchTest"
+             xmlns:forms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="SkiaSharpTouchTest.MainPage">
+    <ContentPage Title="Case 0">
+        <Grid>
+            <!--Case0 click to button --> 
+            <Button Clicked="Handle_Clicked" BackgroundColor="Teal" TextColor="White" Text="Click me!" />
+            <!-- <forms:SKCanvasView EnableTouchEvents="false" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Touch="SKCanvasView_OnTouch" PaintSurface="Handle_PaintSurface" /> -->
+        </Grid>
+    </ContentPage>
+    <ContentPage Title="Case 1">
+        <Grid>
+            <!--Case0 no click to button with enable touch events false --> 
+            <Button Clicked="Handle_Clicked" BackgroundColor="Teal" TextColor="White" Text="Click me!" />
+            <forms:SKCanvasView EnableTouchEvents="false" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Touch="SKCanvasView_OnTouch" PaintSurface="Handle_PaintSurface" /> 
+        </Grid>
+    </ContentPage>
+    <ContentPage Title="Case 2">
+        <Grid>
+            <!--Case0 no click to button with enable touch events and handled = false --> 
+            <Button Clicked="Handle_Clicked" BackgroundColor="Teal" TextColor="White" Text="Click me!" />
+            <forms:SKCanvasView EnableTouchEvents="true" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Touch="SKCanvasView_OnTouch" PaintSurface="Handle_PaintSurface" />
+        </Grid>
+    </ContentPage>
+</TabbedPage>
